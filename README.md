@@ -8,8 +8,8 @@ Now mockito is allowed to mock static method
 
 
 
-Private method test: Not possible
-Private method mock: Using power mock
+Private method test: Using power mock. Using Whitebox.invokeMethod(...)
+Private method mock: Using power mock. Usig spy() and when().then() reflection.
 
 
 final method test: Nothing special, can do using normal junit only (mockito or powermock not needed)
