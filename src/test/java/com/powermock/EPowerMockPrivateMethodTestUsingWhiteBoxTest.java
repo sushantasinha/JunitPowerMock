@@ -17,11 +17,10 @@ public class EPowerMockPrivateMethodTestUsingWhiteBoxTest {
     //Method With Argument and Return Value
     @Test
     public void privateMethodWithArgButReturnValue () throws Exception {
-        //Partial mock for final methods
         CollaboratorForPrivateMocking collaborator = new CollaboratorForPrivateMocking();
         CollaboratorForPrivateMocking mock = spy(collaborator);
-        //when(mock, "privateMethodWithParam", ArgumentMatchers.anyString()).thenReturn("All");
-        String returnValue = Whitebox.invokeMethod(mock, "privateMethodWithParam", "Everyone");
+        //when(mock, "privateMethodWithParam", ArgumentMatchers.anyString()).thenReturn("All");//This is if we want to mock private method
+        String returnValue = Whitebox.invokeMethod(mock, "privateMethodWithParam", "Everyone"); //If we want to test private method directly, without mocking
         Assert.assertEquals("HelloEveryone !", returnValue);
         verifyPrivate(mock).invoke("privateMethodWithParam", "Everyone");
     }

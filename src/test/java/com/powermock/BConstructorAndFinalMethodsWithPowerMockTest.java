@@ -12,7 +12,9 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.powermock.api.mockito.PowerMockito.*;
 
 @RunWith(PowerMockRunner.class)
-@PrepareForTest({CollaboratorWithConstructorAndFinalMethods.class}) //Class name where the Static method is present. Fully qualified class name i.e. incl package name ()
+@PrepareForTest({CollaboratorWithConstructorAndFinalMethods.class})
+//IMP: PrepareForTest => While mocking static method we passed the name of the static method here. But for constructor mocking, it is little different.
+//For constructor mocking, we need to pass which class using that constructor i.e. caller class.
 public class BConstructorAndFinalMethodsWithPowerMockTest {
 
     @Test
