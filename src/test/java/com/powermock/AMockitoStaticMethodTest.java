@@ -12,7 +12,8 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.powermock.api.mockito.PowerMockito.*;
 
 @RunWith(PowerMockRunner.class)
-@PrepareForTest({CollaboratorWithStaticMethods.class}) //Class name where the Static method is present. Fully qualified class name i.e. incl package name ()
+@PrepareForTest({CollaboratorWithStaticMethods.class})
+//Class name where the Static method is present. Fully qualified class name i.e. incl package name ()
 public class AMockitoStaticMethodTest {
 
     //static method mock
